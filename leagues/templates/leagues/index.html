@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sports Leagues</title>
+	</head>
+	<body>
+
+		<h1>All Baseball Leagues</h1>
+		<ol>
+			{% for league in All_Baseball_Leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All Women Leagues</h1>
+		<ol>
+			{% for league in All_Women_Leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>Any Type of Hockey Leagues</h1>
+		<ol>
+			{% for league in Any_Type_of_Hockey_Leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All non-Football Leagues</h1>
+		<ol>
+			{% for league in All_Leagues_that_isnt_football %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All Conference Leagues</h1>
+		<ol>
+			{% for league in All_Conference_Leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All Atlantic Leagues</h1>
+		<ol>
+			{% for league in All_Atlantic_Leagues %}
+				<li>{{league.name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All Dallas Teams</h1>
+		<ol>
+			{% for team in All_Dallas_Teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All Raptor Teams</h1>
+		<ol>
+			{% for team in All_Raptor_Teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All City Teams</h1>
+		<ol>
+			{% for team in All_City_teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All T Teams</h1>
+		<ol>
+			{% for team in All_T_Teams %}
+				<li>{{team.team_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All Teams ordered by City Name</h1>
+		<ol>
+			{% for team in All_teams_ordered_in_alpha_order_by_city %}
+				<li>{{team.team_name}} - {{team.location}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All Cooper Players</h1>
+		<ol>
+			{% for player in All_Cooper_last_name_players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All Joshua Players</h1>
+		<ol>
+			{% for player in All_players_named_Joshua %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All Cooper Players except Joshua</h1>
+		<ol>
+			{% for player in All_Cooper_last_name_players_except_Joshua %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		<h1>All players named Alexander or Wyatt</h1>
+		<ol>
+			{% for player in Allplayers_names_Alexander_or_Wyatt %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% endfor %}
+		</ol>
+		
+		
+		
+
+		<!-- <h1>Leagues</h1>
+		<ol>
+			{% for league in leagues %}
+				<li>{{league.name}}</li>
+			{% empty %}
+				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>Teams</h1>
+		<ol>
+			{% for team in teams %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% empty %}
+				<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>Players</h1>
+		<ol>
+			{% for player in players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% empty %}
+				<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol> -->
+	</body>
+</html>
